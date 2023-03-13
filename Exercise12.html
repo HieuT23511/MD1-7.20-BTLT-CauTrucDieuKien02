@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 12</title>
+</head>
+<body>
+<h2>Tính lãi suất ngân hàng</h2>
+<table>
+    <tr>
+        <td><b>Initial Amount:</b></td>
+        <td><input type="number" id="I.A" placeholder="Nhập số tiền ban đầu"></td>
+    </tr>
+    <tr>
+        <td><b>Months:</b></td>
+        <td><input type="number" id="Months" placeholder="Nhập số tháng tiền gửi"></td>
+    </tr>
+    <tr>
+        <td><b>Monthly Interest Rate: </b></td>
+        <td><input type="number" id="MIR" placeholder="Nhập lãi suất tháng"></td>
+    </tr>
+</table>
+<br>
+<button type="button" id="calculate">Calculate</button>
+<br>
+<b id="display"></b>
+<script>
+    let btn = document.getElementById('calculate');
+    btn.addEventListener("click", calculate);
+
+    function calculate() {
+        let InitialAmount = +document.getElementById('I.A').value;
+        let Months = +document.getElementById('Months').value;
+        let MonthlyInterestRate = +document.getElementById('MIR').value;
+        if (InitialAmount > 0 && Months > 0 && MonthlyInterestRate > 0) {
+            let TaxIncome = InitialAmount * Months * MonthlyInterestRate
+            document.getElementById('display').innerHTML = ' Số tiền lãi ngân hàng là: ' + TaxIncome + ' Đồng';
+        } else {
+            alert('Vui lòng nhập lại');
+        }
+    }
+</script>
+</body>
+</html>
