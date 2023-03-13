@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 8</title>
+</head>
+<body>
+<h2>Bài tập số 8. Kiểm tra tuổi</h2>
+<script>
+    let inputage = +prompt('Input tuổi cần kiểm tra');
+    if (Number.isInteger(inputage) && inputage < 0) {
+        alert('Yêu cầu nhập lại');
+    } else if (Number.isInteger(inputage) && inputage > 0 && inputage < 120) {
+        alert(`${inputage}  ` + ' là tuổi của một người')
+    } else {
+        alert(`${inputage}` + ' khônglà tuổi của một người')
+    }
+</script>
+</body>
+</html>
