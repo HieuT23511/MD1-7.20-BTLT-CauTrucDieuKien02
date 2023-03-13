@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 7</title>
+</head>
+<body>
+<h2>Giải phương trình bậc hai</h2>
+<input type="number" id="b"> *x +
+<input type="number" id="c"> =0 <br> <br>
+<button type="button" id="calculate" onclick="calculate()">Calculate</button>
+<br>
+<b id="display"></b>
+<script>
+    function calculate() {
+        let b = +document.getElementById('b').value;
+        let c = +document.getElementById('c').value;
+        if (b !== 0) {
+            let x = (-c) / b;
+            document.getElementById('display').innerHTML = 'Phương trình có nghiệm x = ' + x;
+        } else if (c != 0) {
+            document.getElementById('display').innerHTML = 'Phương trình vô nghiệm '
+        } else {
+            document.getElementById('display').innerHTML = 'Phương trình luôn đúng'
+        }
+    }
+</script>
+</body>
+</html>
