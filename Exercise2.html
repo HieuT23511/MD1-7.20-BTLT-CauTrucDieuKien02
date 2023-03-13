@@ -8,8 +8,13 @@
 <h2>Bài tập số 2. Chuyển đổi từ met sang feet</h2>
 <script>
     let met = +prompt('Input độ dài (m)');
-    ft = met * 3.2808;
-    document.write('Feet tương ứng là : ', ft);
+    if (met>0) {
+        ft = met * 3.2808;
+        document.write('Feet tương ứng là : ', ft);
+    }
+    else {
+        alert("Yêu cầu nhập lại")
+    }
 </script>
 </body>
 </html>
