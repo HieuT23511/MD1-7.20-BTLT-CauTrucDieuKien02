@@ -8,8 +8,14 @@
 <h2>Bài tập số 3. Tính diện tích hình vuông</h2>
 <script>
     let canhA = +prompt('Input độ dài cạnh A (cm)');
-TheAreaSquare = canhA * canhA;
-    document.write('Diện tích hình vuông có cạnh A là : ', TheAreaSquare);
+    if (canhA > 0) {
+        TheAreaSquare = canhA * canhA;
+        document.write('Diện tích hình vuông có cạnh A là : ', TheAreaSquare);
+    } else {
+        alert('Yêu cầu nhập lại');
+    }
+
+
 </script>
 </body>
 </html>
